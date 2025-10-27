@@ -1,0 +1,119 @@
+10. Develop a JavaScript program with Ajax (with HTML/CSS) for:
+a. Use ajax() method (without Jquery) to add the text content from the text file by
+sending ajax request.
+b. Use ajax() method (with Jquery) to add the text content from the text file by
+sending ajax request.
+c. Illustrate the use of getJSON() method in jQuery
+d. Illustrate the use of parseJSON() method to display JSON values.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX and JSON Examples</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    button { margin: 5px 0; padding: 8px 12px; }
+    .content, .jsonContent { margin-top: 10px; padding: 10px; border: 1px solid #ddd; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Ajax without jQuery</h2>
+  <button onclick="loadContent()">Load Text Content (No jQuery)</button>
+  <div id="content" class="content">Content from the file will load here.</div>
+
+  <h2>Ajax with jQuery</h2>
+  <button id="loadBtn">Load Text Content (jQuery)</button>
+  <div id="jqueryContent" class="content">Content from the file will load here.</div>
+
+  <h2>getJSON() Method</h2>
+  <button id="loadJsonBtn">Load JSON Data (jQuery)</button>
+  <div id="jsonContent" class="jsonContent">JSON data will load here.</div>
+
+  <h2>parseJSON() Method</h2>
+  <button id="parseJsonBtn">Parse JSON</button>
+  <div id="parseContent" class="jsonContent">Parsed JSON data will appear here.</div>
+
+  <script>
+   
+    function loadContent() {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "sample.txt", true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById("content").innerText = xhr.responseText;
+        }
+      };
+      xhr.send();
+    }
+
+    // b) Using jQuery AJAX to load text content
+    $('#loadBtn').click(function() {
+      $.ajax({
+        url: 'sample.txt',
+        method: 'GET',
+        success: function(data) {
+          $('#jqueryContent').text(data);
+        }
+      });
+    });
+
+    // c) Using getJSON() method
+    $('#loadJsonBtn').click(function() {
+      $.getJSON('data.json', function(data) {
+        $('#jsonContent').html(
+          `<p>Name: ${data.name}</p>
+           <p>Age: ${data.age}</p>
+           <p>Country: ${data.country}</p>`
+        );
+      });
+    });
+
+    // d) Using parseJSON() to parse JSON string and display data
+    $('#parseJsonBtn').click(function() {
+      const jsonString = '{"name": "Alice", "age": 25, "country": "USA"}';
+      const jsonObject = $.parseJSON(jsonString);
+      $('#parseContent').html(
+        `<p>Name: ${jsonObject.name}</p>
+         <p>Age: ${jsonObject.age}</p>
+         <p>Country: ${jsonObject.country}</p>`
+      );
+    });
+  </script>
+</body>
+</html>
+
+
+
+{"name": "Alice", "age": 25, "country": "USA"
+
+
+sample.txt
+Indian culture is the heritage of social norms and technologies that originated in or are associated with the ethno-linguistically diverse India, pertaining to the Indian subcontinent until 1947 and the Republic of India post-1947. The term also applies beyond India to countries and cultures whose histories are strongly connected to India by immigration, colonisation, or influence, particularly in South Asia and Southeast Asia. India's languages, religions, dance, music, architecture, food, and customs differ from place to place within the country.
+
+Indian culture, often labelled as a combination of several cultures, has been influenced by a history that is several millennia old, beginning with the Indus Valley Civilization and other early cultural areas.[1][2]
+
+Many elements of Indian culture, such as Indian religions, mathematics, philosophy, cuisine, languages, dance, music, and movies have had a profound impact across the Indosphere, Greater India, and the world. The British Raj further influenced Indian culture, such as through the widespread introduction of the English language, which resulted in a local English dialect and influences on the Indian languages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

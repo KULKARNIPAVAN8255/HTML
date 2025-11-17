@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+            Form
+        </title>
+    </head>
+    <style>
+        div{
+            background-color:cyan;
+            padding:100px;
+            margin:35px;
+            border-radius:100px;
+        }
+
+        h1{
+            color: red;
+            text-align: center;
+            font-size:40px;
+        }
+
+        input[type=text],[type=email],[type=password],[type=date],textarea,select{
+            width:100%;
+            padding:10px;
+            border-left:solid 10px red;
+            border-radius:15px;
+            background-color:bisque;
+            outline:orange solid 2px;
+            font-size:15px;
+        }
+
+        h3{
+            color:red;
+            font-size:40px;
+        }
+        label[for=firstname],[for=lastname],[for=Email],[for=password],[for=Male],[for=Female],[for=others],[for=firstyear],[for=DOB],[for=Country],[for=Bio]{
+            color:deeppink;
+            font-size:19px;
+            padding:15px;
+            width:100%;
+        }
+        button{
+            width:100%;
+            padding: 15px;
+            background-color: bisque;
+            border-radius:15px;
+
+        }
+    </style>
+    <body>
+        <div>
+            <h1><marquee behavior="side" direction=""> Regitration Form</marquee></h1>
+            <form action="">
+
+                <label for="firstname">First Name</label><br>
+                <input type="text"><br>
+                <label for="lastname">Last Name</label><br>
+                <input type="text"><br>
+
+                <label for="Email">Email</label><br>
+                <input type="email"><br>
+                <label for="password">Password</label><br>
+                <input type="password"><br>
+
+                <h3><marquee behavior="side" direction="right"> Genders</marquee></h3>
+                <input type="radio"><label for="Male">Male</label>
+                <input type="radio"><label for="Female">Female</label>
+                <input type="radio"><label for="others">Others</label><br>
+
+                <h3>Years</h3>
+                <input type="checkbox"><label for="firstyear">First Year</label><br>
+                <input type="checkbox"><label for="firstyear">Second Year</label><br>
+                <input type="checkbox"><label for="firstyear">Third Year</label><br>
+                <input type="checkbox"><label for="firstyear">Fourth Year</label><br><br>
+
+                <label for="DOB">Date of Birth</label><br>
+                <input type="date"><br>
+
+                <label for="Country">Country</label><br>
+                <select name="Country" id="Country">
+                    <option value="India">India</option>
+                    <option value="China">Chaina</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Shrilanka">Shrilanka</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                </select><br>
+
+                <label for="Bio">Bio</label><br>
+                <textarea name="" id=""></textarea><br><br>
+
+                <button>submit</button>
+
+
+            </form>
+        </div>
+    </body>
+</html>

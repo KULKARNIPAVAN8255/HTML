@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>
+            Time Table
+        </title>
+    </head>
+    <style>
+        table{
+            background-color:lawngreen;
+            border:orange 5px solid;
+            color:blueviolet;
+            width:100%;
+            font-size:20px;
+            margin:auto;
+            outline:solid 5px red;
+        }
+        th,tr,td{
+            text-align:center;
+            color: crimson;
+        }
+        th,td{
+            border:2px solid teal;
+            padding: 5px;;
+        }
+        #hi{
+            background-color:yellow;
+            color:red;
+        }
+        th{
+            color:green;
+        }
+        #hlo{
+            color:darkslateblue;
+
+        }
+        #ok{
+            background-color: aqua;
+        }
+        h1{
+            color:blue;
+            text-align: center;
+            font-size:55px;
+        }
+
+        
+
+    </style>
+    <body>
+        <h1>Class TimeTable</h1>
+     
+    <table>
+
+        <thead>
+            <tr>
+                <th rowspan="2">DAY</th>
+                <th colspan="5" id="hi">Subject/Time</th>
+            </tr>
+            <tr>   
+                <th>9:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>1:00 - 2:00</th>
+                <th>2:00 - 3:00</th>
+            </tr>
+        </thead>
+
+        <tbody>
+             <tr>
+                <td id="hlo">Mon</td>
+                <td>Maths</td>
+                <td>Physics</td>
+                <td colspan="2" id="ok">Physics Lab</td>
+                <td>English</td>
+             </tr>
+
+             <tr>
+                <td id="hlo">Tue</td>
+                <td>Chemistry</td>
+                <td>Mathemetics</td>
+                <td>English</td>
+                <td id="ok">AI</td>
+                <td>Free Period</td>
+             </tr>
+
+             <tr>
+                <td id="hlo">Wed</td>
+                <td colspan="2" id="ok">ML</td>
+                <td>Chemistry</td>
+                <td>English</td>
+                <td>Chemistry Lab</td>
+             </tr>
+
+             <tr>
+                <td id="hlo">Thu</td>
+                <td>Maths</td>
+                <td>Physics</td>
+                <td>CS</td>
+                <td>Chemistry</td>
+                <td>DS</td>
+             </tr>
+
+             <tr>
+                <td id="hlo">Fri</td>
+                <td>English</td>
+                <td colspan="2"id="ok">CS Lab</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+             </tr>
+             </tbody>
+
+             <tfoot>
+                <tr>
+                    <td colspan="6" id="hi">Note: Lab sessions and Electives are highlighted with different colors.</td>
+                </tr>
+             </tfoot>
+         
+
+    </table>
+    </body>
+</html>

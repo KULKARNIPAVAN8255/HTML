@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        width: 500px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        font-size: 24px;
+      }
+
+       
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+
+      .form-group label {
+        width: 170px;  
+        font-weight: bold;
+        font-size: 18px;  
+        color: #222;
+      }
+
+      .form-group input,
+      .form-group select {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 17px;  
+      }
+
+       
+      .options {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+      }
+
+      .options label {
+        font-weight: normal;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        transform: scale(1.3);  
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 14px;
+        border-radius: 6px;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #35b088;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Registration Form</h1>
+
+      <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Enter first name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Enter last name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="usn" placeholder="Enter USN" />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input
+          type="password"
+          id="pwd"
+          name="pwd"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <p><b style="font-size: 17px">Select your favorite language:</b></p>
+      <div class="options">
+        <label
+          ><input type="radio" name="fav_language" value="HTML" /> HTML</label
+        >
+        <label
+          ><input type="radio" name="fav_language" value="CSS" /> CSS</label
+        >
+        <label
+          ><input type="radio" name="fav_language" value="JavaScript" />
+          JavaScript</label
+        >
+      </div>
+
+      <p><b style="font-size: 17px">Select your vehicles:</b></p>
+      <div class="options">
+        <label
+          ><input type="checkbox" name="vehicle1" value="Bike" /> Bike</label
+        >
+        <label><input type="checkbox" name="vehicle2" value="Car" /> Car</label>
+        <label
+          ><input type="checkbox" name="vehicle3" value="Boat" /> Boat</label
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars" size="3" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="benz">Benz</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="favcolor">Favorite Color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+      </div>
+
+      <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@email.com"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" />
+      </div>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
